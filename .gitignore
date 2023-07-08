@@ -24,3 +24,9 @@ yarn-error.log*
 
 # vscode
 .vscode
+
+.eps
+.jpg
+
+src/img
+./src/img

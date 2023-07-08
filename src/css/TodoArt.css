@@ -1,0 +1,30 @@
+.art-container {
+    border: 1px solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.art-container img {
+    height: 90%;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.art-container h2 {
+    
+
+}
+
+.art-container p {
+
+}
+
+@media (max-width: 750px) {
+    .art-container {
+        display: none;
+    }
+}

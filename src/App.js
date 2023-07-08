@@ -2,8 +2,11 @@ import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
+import { TodoArt } from './TodoArt';
 import { CreateTodoButton } from './CreateTodoButton';
-import './App.css';
+import "./css/ContainerTodoListImg.css"
+
+
 import React from 'react';
 
 const defaultTodos = [
@@ -19,17 +22,19 @@ function App() {
       {/* //componentes */}
       <TodoCounter completed ={16} total = {25}/>
       <TodoSearch />
-      
-      <TodoList > 
+      <div className='Container-todoList-img'>
+        <TodoList > 
 
-        {defaultTodos.map(todo => (
-          <TodoItem 
-          key ={ todo.text} 
-          text={todo.text}
-          completed = {todo.completed} />
-        ))}
+          {defaultTodos.map(todo => (
+            <TodoItem 
+            key ={todo.text} 
+            text={todo.text}
+            completed = {todo.completed} />
+          ))}
 
-      </TodoList>
+        </TodoList>
+        <TodoArt />
+      </div>
 
       <CreateTodoButton />
     </React.Fragment>

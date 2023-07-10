@@ -17,25 +17,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-.todo-item span {
-    margin: 10px;
-}
-
-.TodoItem-p--complete {
-    text-decoration: line-through;
-}
-
-.Icon-check--active {
-    color: green;
-}
-
-.todo-item .close-todo-item {
-    cursor: pointer;
-    font-weight: bold;
-    color: red;
-    margin: 5px;
-    
-}
 
 .bar-container {
     margin: 2px 30px 2px 30px;
@@ -44,12 +25,13 @@ body {
     border: 1px solid;
     border-radius: 5px;
     align-items: center;
-
+    display: none;
 }
 
 .todo-item-footer {
     display: flex;
     justify-content: space-between;
+    display: none;
 }
 
 .create-sub-todo-button {

@@ -1,0 +1,53 @@
+.todo-item .Icon-container-check {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    color: gray;
+    margin: 5px;
+}
+
+/* .todo-item span {
+    margin: 10px;
+} */
+
+.TodoItem-p--complete {
+    text-decoration: line-through;
+}
+
+.Icon-container-check--active {
+    color: green;
+    cursor: pointer;
+}
+
+.todo-item .Icon-container-delete {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+        margin: 5px;
+}
+
+.todo-item .Icon-container-delete:hover {
+    color: red;
+} 
+
+.Icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.todo-item .Icon-container-delete:hover .Icon-svg{
+    fill: red;
+} 
+
+.todo-item .Icon-container-check:hover .Icon-svg{
+    fill: green;
+} 
+/* .todo-item .close-todo-item {
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
+    margin: 5px;
+    
+} */

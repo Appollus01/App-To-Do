@@ -3,4 +3,11 @@
     border-radius: 10px;
     padding: 5px;
     margin: 16px;
+    width: 46%;
+}
+
+@media (max-width: 750px) {
+    .search-todo {
+        width: 90%;
+    }
 }

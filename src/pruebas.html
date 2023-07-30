@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dp"></div>
+
+    <div class="space">
+        Employee: <select id="employee"></select>
+      </div>
+
+    <script type="text/javascript">
+    const dp = new DayPilot.Scheduler("dp");
+    dp.viewType = "Days";
+
+    dp.startDate = new DayPilot.Date().firstDayOfMonth();
+    dp.days = dp.startDate.daysInMonth();
+
+    dp.timeHeaders = [
+        { groupBy: "Day", format: "MMMM yyyy" },
+        { groupBy: "Hour"}
+    ];
+
+    dp.init();
+
+    async function loadResources() {
+        const {data} = await DayPilot.Http.get("backend_resources.php");
+        var select = document.querySelector("#employee");
+        data.forEach(function(item) {
+            var option = document.createElement("option");
+            option.value = item.id;
+            option.innerText = item.name;
+            select.appendChild(option);
+        });
+        loadEvents();
+    }
+
+    function loadEvents() {
+        const employee = document.querySelector("#employee").value;
+        const start = dp.visibleStart();
+        const end = dp.visibleEnd();
+        const url = `backend_events.php?resource=${employee}&start=${start}&end=${end}`;
+        dp.events.load(url, () => {
+            dp.message("Events loaded");
+        });
+    }
+    </script>
+    
+</body>
+</html>

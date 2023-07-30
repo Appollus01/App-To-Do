@@ -17,8 +17,9 @@
     width: 64px;
     transform: rotate(0);
     transition: 1s ease;
+    z-index: 1;
 }
 
 .CreateTodoButton:hover {
-    transform: rotate(270deg);
+    transform: rotate(225deg);
 }

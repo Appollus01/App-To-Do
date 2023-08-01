@@ -1,9 +1,15 @@
 import React from 'react';
+import '../css/EmptyTodo.css'
 
 function EmptyTodos (){
   
     return (
-      <p>Crea tu primer ToDo....</p>
+      <div className='EmptyTodo-Container'>
+
+        <p className='EmptyTodo'>No tienes tareas pendientes....</p>
+        <p className='addTodo'>Nueva tarea</p>
+      </div>
+      
     )
   }
 
